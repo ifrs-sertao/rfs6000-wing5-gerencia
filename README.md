@@ -9,7 +9,6 @@ profile rfs6000 default-rfs6000
 
 show context
 
-
 ```
 ## show context 
 Mostra as configurações do contexto atual, por exempl no default-rfs6000 constarão todas as configurações de perfil tais como configurações VLAN, STP, Portas, etc.
@@ -26,5 +25,25 @@ commit
 ```
 Se commit não der erros, execute:
 ```shell
+commit write
+```
+## Ajustes na porta Trunk de um AP ( ge 1) 
+Comandos para configurar porta trunk do AP e add VLANs
+
+Comando para acessar uma AP específico via MAC (precisa estar no contexto config)
+```shell
+ap621 5C-0E-8B-E9-AC-95
+```
+Acessando a interface trunk (uplink) do AP
+```shell
+interface ge 1
+```
+Configura porta Trunk, define VLAN Nativa e adiciona VLANs
+```shell
+switchport mode trunk
+switchport trunk native vlan 911
+switchport trunk allowed vlan add
+912,540,525,40
+commit 
 commit write
 ```
