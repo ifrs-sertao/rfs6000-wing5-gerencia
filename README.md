@@ -10,6 +10,22 @@ profile rfs6000 default-rfs6000
 show context
 
 ```
+## Mostrar as redes wireless criadas 
+```shell
+rfs01#show wireless wlan 
+-----------------------------------------------------------------------
+  WLAN               SSID         CLIENTS            RADIOS             
+-----------------------------------------------------------------------
+LOCAL              primei..acesso 14                 52                 
+radio              SertaoAplicado 3                  52                 
+IFRS-Alunos        IFRS-Alunos    2                  39                 
+IFRS-SERTAO        IFRS-SERTAO    0                  52                 
+IFRS-Visitantes    IFRS-V..antes2 0                  13                 
+IFRS-Professores   IFRS-P..ssores 0                  26                 
+IFRS-Adm..trativos IFRS-A..ativos 0                  26                 
+-----------------------------------------------------------------------
+Total number of wlans displayed: 7
+```
 ## show context 
 Mostra as configurações do contexto atual, por exempl no default-rfs6000 constarão todas as configurações de perfil tais como configurações VLAN, STP, Portas, etc.
 ```shell
