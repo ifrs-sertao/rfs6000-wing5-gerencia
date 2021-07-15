@@ -10,6 +10,15 @@ profile rfs6000 default-rfs6000
 show context
 
 ```
+## Confirar porta TRUNK controladora RFS6000
+```shell
+profile rfs6000 default-rfs6000
+interface up1
+switchport trunk allowed vlan add 1-2000
+commit
+commit write
+```
+
 ## Mostrar as redes wireless criadas 
 ```shell
 rfs01#show wireless wlan 
